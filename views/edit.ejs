@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+
+<h1 style="color: white;">Edit Post</h1>
+
+<form action="/edit/<%= post.id %>" method="POST">
+    <textarea name="post" rows="5"><%= post.post %></textarea>
+    <br>
+    <button type="submit" style="background-color: rgb(183, 211, 0); width: 100px;">Save Changes</button>
+</form>
+
+<a style="text-decoration: none; color: white; " href="/posts/<%= post.id %>">Cancel</a>
+
+<%- include("partials/footer.ejs") %>

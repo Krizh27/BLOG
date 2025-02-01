@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+
+<link rel="stylesheet" href="/styles/main.css"> <!-- Link to CSS -->
+<h1 style="color: white;">Create a Post</h1>
+
+<form action="/create" method="POST">
+    <input type="text" id="Author" name="author" placeholder="Enter Author" required>
+    <textarea id="post" name="post" placeholder="Enter Post" required></textarea>
+    <button type="submit" style="background-color:rgb(183, 211, 0); color: rgb(0, 0, 0); width: 100px;">Create Post</button>
+</form>
+
+<%- include("partials/footer.ejs") %>

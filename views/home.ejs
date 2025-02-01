@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+
+<h1 style="color: white;">All Posts</h1>
+
+<% if (posts.length === 0) { %>
+    <p style="color: white;">No posts yet. <a style="color: white; text-decoration: none;" href="/create">Create one</a>!</p>
+<% } else { %>
+    <% posts.forEach(post => { %>
+        <div class="post">
+            <h3> <img style="pointer-events: none;" width="32" height="32" src="https://img.icons8.com/windows/32/writer-male.png" alt="writer-male"/> <%= post.author %></h3>
+           <p><%= new Date().toLocaleString() %></p> 
+            <p><%= post.post.substring(0, 100) %>...</p>
+            <a style="color: white; text-decoration: none;" href="/posts/<%= post.id %>">Read More ➣</a>
+        </div>
+    <% }); %>
+<% } %>
+
+<%- include("partials/footer.ejs") %>

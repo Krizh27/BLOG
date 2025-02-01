@@ -1,0 +1,119 @@
+body{
+    background-color: #1c1c1c;
+}
+.nav-link {
+    color: white !important; /* Ensures text color is white */
+}
+
+.nav-link:hover {
+    color: #ddd !important; /* Light gray on hover */
+}
+form {
+    width: 80%;  /* Adjust width to 80% of the screen */
+    max-width: 600px; /* Prevents form from becoming too wide */
+    min-height: 300px; /* Ensures a consistent form height */
+    padding: 20px;
+    margin: 20px auto; /* Centers the form */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between elements */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    form {
+        width: 90%;  /* Increase width for smaller screens */
+        min-height: auto; /* Allow height to adjust */
+    }
+}
+
+input, textarea, button {
+     /* Make form elements full width */
+    font-size: 16px;
+}
+
+/* Center the form */
+.content {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    border: 2px solid black;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+    background-color: #0b3d0b;
+}
+
+/* Author input should be small */
+#Author {
+    width: 30%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Post textarea should be below Author and take up 80% of the page */
+#post {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    resize: vertical; /* Allow resizing */
+}
+
+/* Style the button */
+#createbtn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+:root{
+    --blue: #0056b3;
+}
+#createbtn:hover {
+    background-color: var(--blue)
+}
+
+.box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 186px;
+}
+.delbtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.post {
+    color: white !important;
+    padding: 20px;
+    margin: 20px auto;  /* Centers the posts */
+    border: solid 2px white;
+    border-radius: 20px;
+    width: 80%;  /* Makes it responsive instead of a fixed 1000px */
+    height: 20%;
+    max-width: 1000px;  /* Prevents excessive stretching on large screens */
+    min-height: 100px; /* Ensures consistent height *
+    /* justify-content: space-between;  */
+}

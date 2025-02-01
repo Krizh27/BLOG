@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+<div class="post">
+    <h2>Author: <%= post.author %></h2>
+    <p><%= post.post %></p>
+
+    <a style="text-decoration: none; color: rgb(0, 0, 0); border: 1px solid black; padding:5px 10px 5px 10px; background-color: rgb(183, 211, 0) ;" href="/edit/<%= post.id %>">Edit</a>
+    <form action="/delete/<%= post.id %>" method="POST" style="display:inline;">
+        <button type="submit" style="background-color: rgb(183, 211, 0);">Delete</button>
+    </form>
+</div>
+
+<a href="/" style="color: white; text-decoration: none;">Back to Posts</a>
+<%- include("partials/footer.ejs") %>
